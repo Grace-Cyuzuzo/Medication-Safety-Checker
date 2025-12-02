@@ -5,7 +5,7 @@ The **Medication Safety Checker** is a PL/SQL–based system designed to detect 
 
 ##  Student Information
 **Name:** Gatoya Cyuzuzo Grace  
-**Student ID:** (Add your ID here)
+**Student ID:** 27898
 
 ##  Problem Statement
 Prescribing multiple medicines without checking interactions can lead to harmful or even life-threatening adverse effects. Healthcare providers often lack automated tools to quickly identify dangerous medicine combinations. This project aims to provide a database-driven safety mechanism that checks interactions in real time and alerts doctors before dispensing medication.
