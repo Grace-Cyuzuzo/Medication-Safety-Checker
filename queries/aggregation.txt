@@ -1,0 +1,13 @@
+--aggregation
+
+-- Top 10 medicine pairs by how often they appear together (simple co-occurrence)
+SELECT LEAST(pd1.med_id, pd2.med_id) medA,
+       GREATEST(pd1.med_id, pd2.med_id) medB,
+       COUNT(*) occurrences
+FROM prescription_detail pd1
+JOIN prescription_detail pd2
+  ON pd1.pres_id = pd2.pres_id AND pd1.detail_id < pd2.detail_id
+GROUP BY LEAST(pd1.med_id, pd2.med_id), GREATEST(pd1.med_id, pd2.med_id)
+ORDER BY COUNT(*) DESC
+FETCH FIRST 10 ROWS ONLY;
+
